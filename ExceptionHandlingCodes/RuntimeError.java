@@ -18,6 +18,9 @@ public class RuntimeError {
             return a/b ;
         } catch (ArithmeticException e) {
             System.out.println("Denominator cannot be zero");
+            System.out.println("Error: "+ e.getCause());
+            System.out.println("Error: "+ e.getMessage());
+             System.out.println("Error: "+ e.getLocalizedMessage());
             return 0;
         } 
     }
