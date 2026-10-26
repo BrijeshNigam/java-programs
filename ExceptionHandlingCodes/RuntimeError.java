@@ -13,7 +13,13 @@ public class RuntimeError {
 
 
     public static int divide(int a, int b) {
-        return a/b ; 
+
+        try{
+            return a/b ;
+        } catch (ArithmeticException e) {
+            System.out.println("Denominator cannot be zero");
+            return 0;
+        } 
     }
 }
 
